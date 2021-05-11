@@ -1,0 +1,76 @@
+.ButtonsWrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 76px;
+}
+
+.InputWrapper {
+  width: 125px;
+  background-color: #cfe8ee;
+  border-radius: 3px;
+  margin-right: 32px;
+}
+
+.InputFile {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
+.InputFileButtonText {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #1b9fbf;
+  padding: 8px 10px;
+}
+
+.InputFileButton {
+  width: 100%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.SendButton {
+  background-color: #3d9a26;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  padding: 8px 12px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.Line {
+  height: 1px;
+  background-color: #d2c8c8;
+  margin-right: 30px;
+  margin-bottom: 50px;
+}
+
+.FileList {
+  display: flex;
+  list-style-type: none;
+  height: 62px;
+}
+
+.ErrorWrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 55px;
+}
+
+.ErrorMessage {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #f90000;
+  margin-left: 15px;
+}

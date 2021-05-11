@@ -1,0 +1,46 @@
+.Course {
+  width: 380px;
+  height: 200px;
+  background: #ffffff;
+  border: 0.55px solid #dfdfdf;
+  border-radius: 2px;
+  margin-right: 47px;
+  margin-bottom: 47px;
+  padding-left: 23px;
+}
+
+.CourseTitle {
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  margin-top: 34px;
+}
+
+.CourseDescription {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #bababa;
+  margin-top: 29px;
+  width: 263px;
+}
+
+.StartButton {
+  padding: 8px 24px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #1b9fbf;
+  background-color: #cfe8ee;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 24px;
+  display: inline-block;
+}

@@ -1,0 +1,36 @@
+doctrine:
+    dbal:
+        url: '%env(resolve:DATABASE_URL)%'
+
+        # IMPORTANT: You MUST configure your server version,
+        # either here or in the DATABASE_URL env var (see .env file)
+        #server_version: '13'
+    orm:
+        auto_generate_proxy_classes: true
+        naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware
+        auto_mapping: true
+        mappings:
+            App\User:
+                is_bundle: false
+                type: annotation
+                dir: '%kernel.project_dir%/src/User/Model'
+                prefix: 'App\User\Model'
+                alias: User
+            App\Course:
+                is_bundle: false
+                type: annotation
+                dir: '%kernel.project_dir%/src/Course/Model'
+                prefix: 'App\Course\Model'
+                alias: Course
+            App\Enrollment:
+                is_bundle: false
+                type: annotation
+                dir: '%kernel.project_dir%/src/Enrollment/Model'
+                prefix: 'App\Enrollment\Model'
+                alias: Enrollment
+            App\Evaluation:
+                is_bundle: false
+                type: annotation
+                dir: '%kernel.project_dir%/src/Evaluation/Model'
+                prefix: 'App\Evaluation\Model'
+                alias: Evaluation

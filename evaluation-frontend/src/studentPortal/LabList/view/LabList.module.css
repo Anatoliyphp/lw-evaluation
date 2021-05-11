@@ -1,0 +1,25 @@
+.LabList {
+  margin-left: 120px;
+}
+
+.CourseTitle {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 35px;
+  margin-bottom: 33px;
+}
+
+.CourseDescription {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  color: #adaaaa;
+  margin-bottom: 26px;
+}
+
+.LabWorks {
+  display: flex;
+  flex-wrap: wrap;
+}

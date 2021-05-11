@@ -1,0 +1,71 @@
+.LoginWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.Login {
+  text-align: center;
+  width: 687px;
+  height: 480px;
+  background-color: #fff;
+  border: 1px solid rgba(174, 174, 174, 0.62);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Title {
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42.19px;
+}
+
+.Form {
+  width: 475px;
+  height: 261px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+}
+
+.Input {
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid rgba(174, 174, 174, 0.62);
+  margin: 0 20px;
+  height: 34px;
+  padding: 0 10px;
+  color: #000;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 21px;
+}
+
+.LoginBtn {
+  color: #fff;
+  height: 34px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  background-color: #003dae;
+  cursor: pointer;
+  margin: 0 20px;
+  font-weight: 500;
+}
+
+.Error {
+  cursor: pointer;
+  color: red;
+  display: inline-block;
+  position: absolute;
+  top: 270px;
+  left: 165px;
+}

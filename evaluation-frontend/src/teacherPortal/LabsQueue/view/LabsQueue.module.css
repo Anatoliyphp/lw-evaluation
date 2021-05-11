@@ -1,0 +1,57 @@
+.LabsQueue {
+  margin-left: 120px;
+}
+
+.CourseList {
+  list-style: none;
+}
+
+.CourseTitle {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 30px;
+}
+
+.GroupList {
+  list-style: none;
+}
+
+.GroupTitle {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 20px;
+  margin-left: 15px;
+}
+
+.LabListItem {
+  display: flex;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  padding: 10px 0;
+  margin-right: 25px;
+}
+
+.LabListItem:first-child {
+  border-top: 1px solid #d2c8c8;
+}
+
+.LabListItem + .LabListItem {
+  border-top: 1px solid #d2c8c8;
+  border-bottom: 1px solid #d2c8c8;
+}
+
+.LabListItem:last-child {
+  margin-bottom: 30px;
+}
+
+.LabTitle {
+  color: #035d73;
+  width: 475px;
+}
+
+.StudentName {
+  width: 420px;
+}

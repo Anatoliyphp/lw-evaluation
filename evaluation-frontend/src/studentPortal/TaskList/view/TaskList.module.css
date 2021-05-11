@@ -1,0 +1,76 @@
+.TaskList {
+  display: flex;
+  flex-direction: column;
+  margin-left: 120px;
+}
+
+.LabTitle {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.TaskLinks {
+  display: flex;
+  flex-direction: column;
+}
+
+.TaskLinkElement {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.TaskLinkElement img {
+  display: inline-block;
+  margin-right: 200px;
+}
+
+.TaskLinkElement:first-child span {
+  position: relative;
+}
+
+.TaskLinkElement:first-child span::before {
+  content: 'Балл';
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: #000000;
+}
+
+.TaskLinkElement + .TaskLinkElement {
+  border-top: 1px solid #d2c8c8;
+}
+
+.TaskLinkElement:first-child {
+  border-top: 1px solid #d2c8c8;
+}
+
+.TaskLinkElement:last-child {
+  border-bottom: 1px solid #d2c8c8;
+}
+
+.TaskLinks a {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #035d73;
+  display: inline-block;
+  width: 300px;
+  margin-right: 90px;
+}
+
+.Score {
+  width: 45px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 14px;
+  color: #000000;
+}

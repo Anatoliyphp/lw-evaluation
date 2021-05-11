@@ -1,0 +1,40 @@
+.Logo {
+  width: 35px;
+  height: 35px;
+  background-color: #c4c4c4;
+  text-align: center;
+  border-radius: 100%;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+}
+
+.Menu {
+  display: none;
+}
+
+.Menu.Active {
+  display: block;
+  cursor: pointer;
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  background-color: #fff;
+  border: 0.5px solid #ececec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  color: #4f4f4f;
+  top: 29px;
+  left: -80px;
+}

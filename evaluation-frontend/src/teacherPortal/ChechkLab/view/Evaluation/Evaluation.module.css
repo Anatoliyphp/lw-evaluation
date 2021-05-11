@@ -1,0 +1,42 @@
+.Evaluation {
+  display: flex;
+  align-items: center;
+}
+
+.Evaluation input {
+  width: 115px;
+  height: 40px;
+  padding: 5px 10px;
+  border: 1px solid #ddd6d6;
+  border-radius: 3px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  margin-right: 25px;
+}
+
+.Evaluation input::-webkit-outer-spin-button,
+.Evaluation input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.ScoreTitle {
+  font-weight: 500;
+  font-size: 29px;
+  line-height: 34px;
+  margin-right: 10px;
+}
+
+.EvaluateButton {
+  background: #f80c0c;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+  padding: 8px 32px;
+  cursor: pointer;
+}

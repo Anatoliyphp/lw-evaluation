@@ -1,0 +1,38 @@
+version: '3.8'
+services:
+  evaluation-nginx:
+    image: nginx:1.19
+    container_name: evaluation-nginx
+    ports:
+      - 80:80
+    volumes:
+      - ./evaluation-service/~config/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./evaluation-service:/var/www/html:ro
+    depends_on:
+      - evaluation-php-fpm
+      - evaluation-db
+  evaluation-php-fpm:
+    build:
+      context: .
+      dockerfile: ./evaluation-service/~config/docker/php-fpm.dev.Dockerfile
+    container_name: evaluation-php-fpm
+    volumes:
+      - ./evaluation-service:/var/www/html:rw
+      - ./evaluation-service/var:/var/www/html/var:rw
+  evaluation-db:
+    image: mysql:8.0
+    container_name: evaluation-db
+    volumes:
+      - ./data/evaluation-db:/var/lib/mysql:rw
+    environment:
+      - MYSQL_DATABASE=evaluation
+      - MYSQL_USER=evaluation-user
+      - MYSQL_PASSWORD=1234
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+  evaluation-storage:
+    build:
+      context: ./storage-service
+      dockerfile: ./config/docker/Dockerfile
+    container_name: evaluation-storage
+    environment: 
+      - FILESTORAGE_ROOT=./data/storage

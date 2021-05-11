@@ -1,0 +1,85 @@
+.LabWork {
+  width: 301px;
+  height: 158px;
+  border: 0.55px solid #dfdfdf;
+  border-radius: 2px;
+  padding-left: 23px;
+  margin-right: 34px;
+  margin-bottom: 34px;
+  position: relative;
+}
+
+.LabWork .Disabled {
+  color: #717171;
+}
+
+.LabWorkTitle {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  margin-top: 34px;
+}
+
+.StartButton {
+  padding: 8px 24px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #1b9fbf;
+  background-color: #cfe8ee;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 43px;
+}
+
+.StartButton:hover:not(:disabled) {
+  filter: brightness(90%);
+}
+
+.StartButton:disabled {
+  background-color: #f1f1f1;
+  color: #b4b4b5;
+  cursor: not-allowed;
+}
+
+.Message {
+  font-weight: normal;
+  display: block;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.ErrorMessage {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ff0909;
+  position: absolute;
+  top: 63px;
+}
+
+.SuccessMessage {
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.SuccessMessage span {
+  display: inline-block;
+}
+
+.SuccessMessage span:first-child {
+  margin-bottom: 5px;
+  color: #06ff01;
+}
+
+.SuccessMessage span:last-child {
+  margin-bottom: 42px;
+}

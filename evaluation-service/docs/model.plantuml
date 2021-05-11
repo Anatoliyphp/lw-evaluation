@@ -1,0 +1,222 @@
+Use this website to view the scheme
+http://www.plantuml.com/plantuml
+
+@startuml
+hide empty fields
+hide empty methods
+
+namespace User_Module {
+
+enum UserRole {
+ STUDENT
+ TEACHER
+}
+
+class User {
+ -int id
+ -string email
+ -int role
+ -?int groupId
+ -string firstName
+ -string lastName
+}
+
+class Group {
+ -int id
+ -string name
+}
+
+User ..> Group
+
+}
+
+namespace Course_Module {
+
+class Task {
+ -int id
+ -string title
+ -string description
+ -int passingScore
+ -int maxScore
+ -int pipelineId
+}
+
+Task ..> EvaluationPipeline
+
+class LabWork {
+ -int id
+ -string title
+ -Task[] tasks
+}
+
+LabWork *-- Task
+
+class Course {
+ -int id
+ -string title
+ -string description
+ -int[] teacherIds
+ -EvaluationPipeline[] pipelines
+}
+
+Course *-- LabWork
+
+interface EvaluationAction {
+ +getType(): EvaluationActionType
+}
+
+class FileUploadAction {
+ -int id
+ -string[] acceptableFileTypes
+}
+
+FileUploadAction ..|> EvaluationAction
+
+class PascalCompilationAction {
+ -int id
+ -int actionIdToCompile
+}
+
+PascalCompilationAction ..|> EvaluationAction
+
+class TeacherEvaluationAction {
+ -int id
+ -int actionId
+}
+
+TeacherEvaluationAction ..|> EvaluationAction
+
+enum EvaluationActionType {
+ FILE_UPLOAD
+ PASCAL_COMPILATION
+ TEACHER_EVALUATION
+}
+
+class EvaluationPipeline {
+ -int id
+ -EvaluationAction[] actions
+}
+
+Course *-- EvaluationPipeline
+EvaluationPipeline *-- EvaluationAction
+
+}
+
+namespace Evaluation_Module {
+
+class TaskEvaluation {
+ -int id
+ -int taskId
+ -int userId
+ -EvaluationAttempt[] attempts
+}
+
+class EvaluationAttempt {
+ -int id
+ -EvaluationStatus finalStatus
+ -EvaluationActionState[] states
+ -DateTime createdAt
+ -DateTime updatedAt
+}
+
+TaskEvaluation *-- EvaluationAttempt
+
+class EvaluationActionState {
+ -int actionId
+ -EvaluationStatus status
+ -EvaluationFileArtifact[] files
+ -EvaluationScoreArtifact[] scores
+ -?EvaluationCompilationArtifact compilation
+ -DateTime createdAt
+ -DateTime updatedAt
+}
+
+EvaluationAttempt *-- EvaluationActionState
+
+class EvaluationFileArtifact {
+ -int id
+ -string fileName
+ -string filePath
+ -DateTime createdAt
+}
+
+EvaluationActionState *-- EvaluationFileArtifact
+
+class EvaluationScoreArtifact {
+ -int id
+ -int score
+ -int passingScore
+ -int maxScore
+ -int evaluatedById
+ -?string comment
+ -DateTime createdAt
+}
+
+EvaluationActionState *-- EvaluationScoreArtifact
+
+class EvaluationCompilationArtifact {
+ -int id
+ -?string errorReason
+ -DateTime createdAt
+}
+
+EvaluationActionState *-- EvaluationCompilationArtifact
+
+enum EvaluationStatus {
+ IN_PROGRESS
+ COMPLETED
+ ERROR
+}
+
+}
+
+namespace Statistics_Module {
+
+class TaskStatistics {
+ -int id
+ -int userId
+ -int taskId
+ -int score
+ -int passingScore
+ -int maxScore
+ -TaskStatus status
+ -DateTime createdAt
+ -DateTime updatedAt
+}
+
+enum TaskStatus {
+ PASSED
+ FAILED
+}
+
+}
+
+namespace Enrollment_Module {
+
+class Enrollment {
+ -int id
+ -int userId
+ -int courseId
+ -LabWorkAvailability[] labWorks
+}
+
+class LabWorkAvailability {
+ -int labWorkId
+ -DateTime accessDate
+}
+
+Enrollment *-- LabWorkAvailability
+
+}
+
+namespace Utils {
+
+interface Storage {
+ +GetFile(string path): File
+ +Save(File file)
+ +DeleteFiles(string[] paths)
+}
+
+}
+
+@enduml

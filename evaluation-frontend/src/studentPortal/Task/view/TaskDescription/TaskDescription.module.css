@@ -1,0 +1,29 @@
+.TaskTitle {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 27px;
+}
+
+.TaskName {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #1b9fbf;
+  margin-bottom: 20px;
+}
+
+.TaskDescription {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+  margin-bottom: 10px;
+  max-width: 1030px;
+}
+
+.TaskExample {
+  background-color: #eff1f4;
+  width: 469px;
+  margin-bottom: 20px;
+}

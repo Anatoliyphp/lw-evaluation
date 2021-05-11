@@ -1,0 +1,90 @@
+.CheckLab {
+  margin-left: 120px;
+}
+
+.LabTitle {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 35px;
+  margin-bottom: 25px;
+}
+
+.TaskList {
+  list-style: none;
+}
+
+.TaskItem {
+  margin-bottom: 90px;
+}
+
+.TaskItemWrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.TaskItemWrapper input {
+  position: absolute;
+  left: -20px;
+  top: 3px;
+}
+
+.TaskTitle {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 35px;
+}
+
+.FileItem {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.FileName {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #035d73;
+  width: 180px;
+}
+
+.DownloadInner {
+  display: flex;
+  align-items: center;
+}
+
+.DownloadButton {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+  color: #777777;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-left: 7px;
+}
+
+.AutoCompile {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 25px;
+}
+
+.CompiledWrapper {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #d2c8c8;
+  border-bottom: 1px solid #d2c8c8;
+  padding: 13px 0;
+}
+
+.CompiledWrapper span {
+  display: block;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  margin-right: 335px;
+}
